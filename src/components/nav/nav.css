@@ -1,0 +1,154 @@
+.container-header {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 12px var(--color-main);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: var(--body-color);
+  z-index: 2;
+}
+
+.container-header .container-nav-list {
+  display: flex;
+  text-align: left;
+  justify-content: left;
+}
+
+.container-header .container-nav-list li {
+  display: inline-block;
+  margin: 30px 20px;
+}
+
+.container-header .container-nav-list li a {
+  font-size: 1.1rem;
+  color: var(--title-color);
+  font-weight: bold;
+  border-bottom: 2px solid var(--color-main);
+  padding-bottom: 5px;
+}
+
+.container-header .container-title {
+  position: relative;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  top: -55px;
+}
+
+.container-header .container-title i {
+  color: var(--color-main);
+}
+
+.container-header .container-settings {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+
+.container-header .container-settings i {
+  font-size: 1.6rem;
+  color: var(--title-color);
+}
+
+.container-header .container-settings:hover {
+  animation: moves 3s linear infinite;
+  transition: var(--transition);
+}
+
+.container-header .container-colores {
+  position: absolute;
+  right: -5px;
+  width: 220px;
+  height: 90px;
+  transform: translateX(250px);
+  background-color: var(--text-color);
+  transition: var(--transition);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 5px;
+}
+
+.container-header .container-colores div {
+  margin: 6px 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.container-header .container-colores div button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--nav-color-text);
+}
+
+.container-header .container-colores div button i {
+  position: relative;
+  top: 2px;
+  color: #fff;
+  font-size: 1.3rem;
+  display: none;
+}
+
+.container-header .container-colores div button i.ri-check-line.active {
+  display: block;
+}
+
+.container-header .container-colores div button.red {
+  background-color: var(--red);
+}
+
+.container-header .container-colores div button.blue {
+  background-color: var(--blue);
+}
+
+.container-header .container-colores div button.orange {
+  background-color: var(--orange);
+}
+
+.container-header .container-colores div button.green {
+  background-color: var(--green);
+}
+
+.container-header .container-colores div button.rosa {
+  background-color: var(--rosa);
+}
+
+.container-header .container-colores div button.red {
+  background-color: var(--red);
+}
+
+.container-header .container-colores div button.blue {
+  background-color: var(--blue);
+}
+
+.container-header .container-colores div button.orange {
+  background-color: var(--orange);
+}
+
+.container-header .container-colores div button.green {
+  background-color: var(--green);
+}
+
+.container-header .container-colores div button.rosa {
+  background-color: var(--rosa);
+}
+
+.container-header .container-colores.open {
+  transform: translateX(0);
+  transition: var(--transition);
+}
+
+@keyframes moves {
+  0%, 100% {
+    transform: rotateZ(0deg);
+  }
+  99% {
+    transform: rotateZ(360deg);
+  }
+}
