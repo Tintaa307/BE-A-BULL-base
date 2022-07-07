@@ -3,8 +3,8 @@ import React, { useState, createContext, useEffect } from "react"
 const ThemeContext = createContext()
 
 const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState("light")
-  const [color, setColor] = useState("red")
+  const [theme, setTheme] = useState("")
+  const [color, setColor] = useState("")
 
   const loadData = () => {
     const theme = localStorage.getItem("theme")
