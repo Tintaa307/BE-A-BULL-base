@@ -13,6 +13,7 @@ import AzulNegro from "../../assets/img/Negro-Azul.svg"
 import NaranjaNegro from "../../assets/img/Negro-Naranja.svg"
 import VerdeNegro from "../../assets/img/Negro-Verde.svg"
 import RosaNegro from "../../assets/img/Negro-Violeta.svg"
+import LoginButton from "../login/LoginButton"
 
 const links = [
   {
@@ -74,11 +75,7 @@ const Nav = () => {
         <div className="container-accesibilidad">
           <i class="fa-solid fa-universal-access"></i>
         </div>
-        <div className="container-login-link">
-          <Link className="link" to={"/login"}>
-            <i class="ri-login-circle-line"></i>
-          </Link>
-        </div>
+        <LoginButton />
         <div className={["container-colores", isOpen].join(" ")}>
           <div onClick={toggleThemeLight} className="color">
             <button value={1} className="red">

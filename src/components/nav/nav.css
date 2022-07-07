@@ -57,15 +57,22 @@
   color: var(--title-color);
 }
 
-.container-header .container-login-link {
+.container-login-link {
   position: absolute;
   top: 30px;
   right: 130px;
 }
 
-.container-header .container-login-link i {
+.container-login-link i {
+  position: absolute;
   font-size: 1.6rem;
   color: var(--title-color);
+}
+
+.container-logout-link {
+  position: absolute;
+  top: 0px;
+  right: 20px;
 }
 
 .container-accesibilidad {
