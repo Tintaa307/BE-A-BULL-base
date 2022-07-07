@@ -183,7 +183,7 @@ a {
   --text-color: #1e1e1e;
   --text-color-light: #353535;
   --title-color: #000;
-  --nav-color-text: #fff;
+  --nav-color-text: #000;
 }
 
 [color="red"] {

@@ -12,13 +12,13 @@
   color: var(--title-color);
 }
 
-.container-home h1 span {
+.container-home h1 span.container-typing {
   position: absolute;
   top: 144px;
   left: 255px;
 }
 
-.container-home h1 span .type {
+.container-home h1 span.container-typing .type {
   color: var(--color-main);
 }
 
@@ -41,19 +41,107 @@
   letter-spacing: 1px;
 }
 
-.container-home .container-content .container-info-content button {
-  width: 220px;
-  height: 45px;
-  border-radius: 10px;
-  outline: none;
-  cursor: pointer;
-  border: 1px solid var(--text-color);
-  background-color: var(--color-main);
-  color: var(--text-color);
-  font-weight: bold;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  color: #fff;
-  font-family: var(--body-font);
-  box-shadow: var(--box-shadow);
+.container-btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  z-index: -1;
+}
+
+.container-btn .cursor {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--color-main);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--color-main);
+  transition: all 0.01s;
+  transform: translateY(-50%, -50%);
+  z-index: 3;
+}
+
+.container-button a.neon {
+  position: relative;
+  display: inline-block;
+  color: var(--title-color);
+  padding: 10px 50px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius: 5px;
+  border: 0.01px solid var(--color-main);
+}
+
+.container-button a.neon:hover {
+  color: var(--title-color);
+  background: var(--color-main);
+  box-shadow: 0 0 10px var(--color-main), 0 0 40px var(--color-main),
+    0 0 80px var(--color-main);
+  transition-delay: 1s;
+}
+
+.container-button a.neon span.span {
+  position: absolute;
+  display: block;
+}
+
+.container-button a.neon span.span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-main));
+}
+
+.container-button a.neon:hover span.span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+.container-button a.neon span.span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, var(--color-main));
+}
+
+.container-button a.neon:hover span.span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.container-button a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--color-main));
+}
+
+.container-button a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.container-button a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, var(--color-main));
+}
+
+.container-button a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
 }

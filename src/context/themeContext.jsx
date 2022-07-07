@@ -21,28 +21,6 @@ const ThemeProvider = ({ children }) => {
     loadData()
   }, [])
 
-  /*useEffect(() => {
-    const localTheme = localStorage.getItem("theme")
-    const localColor = localStorage.getItem("color")
-
-    if (localTheme === "") {
-      setTheme("light")
-    } else {
-      setTheme(localTheme)
-    }
-
-    if (localColor === "") {
-      setColor("red")
-    } else {
-      setColor(localColor)
-    }
-  }, [])
-
-  useEffect(() => {
-    localStorage.setItem("color", color)
-    localStorage.setItem("theme", theme)
-  }, [])*/
-
   const changeColor = (e, color) => {
     color = e.target.className
     setColor(color)

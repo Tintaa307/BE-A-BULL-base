@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import "./home.css"
 import TypeAnimation from "react-type-animation"
 
@@ -35,7 +35,15 @@ const Home = () => {
             perspiciatis vitae. Assumenda, autem atque. Nisi totam cupiditate
             incidunt pariatur ipsum?
           </p>
-          <button className="btn-home">Contact us</button>
+          <div className="container-button">
+            <a className="neon" href="#">
+              <span className="span"></span>
+              <span className="span"></span>
+              <span className="span"></span>
+              <span className="span"></span>
+              Contact Us
+            </a>
+          </div>
         </div>
       </div>
     </main>
