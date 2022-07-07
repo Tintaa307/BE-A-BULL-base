@@ -1,13 +1,24 @@
 import React, { useEffect, useState, useRef } from "react"
 import "./home.css"
 import TypeAnimation from "react-type-animation"
+import { motion } from "framer-motion"
 
 const Home = () => {
   return (
-    <main className="container-home">
+    <motion.main
+      initial={{ x: -800 }}
+      whileInView={{ x: 0 }}
+      transition={{ duration: 0.2, type: "spring", bounce: 0.7 }}
+      className="container-home"
+    >
       <h1>
         Turn into a
-        <span class="container-typing">
+        <motion.span
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.2, delay: 0.8 }}
+          class="container-typing"
+        >
           <TypeAnimation
             cursor={false}
             sequence={[
@@ -26,7 +37,7 @@ const Home = () => {
             repeat={Infinity}
             className="type"
           />
-        </span>
+        </motion.span>
       </h1>
       <div className="container-content">
         <div className="container-info-content">
@@ -46,7 +57,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </main>
+    </motion.main>
   )
 }
 

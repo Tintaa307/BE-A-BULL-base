@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react"
 import "./nav.css"
 import ThemeContext from "../../context/themeContext"
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
 import RojoBlanco from "../../assets/img/Blanco-Rojo.svg"
 import AzulBlanco from "../../assets/img/Blanco-Azul.svg"
 import NaranjaBlanco from "../../assets/img/Blanco-Naranja.svg"
@@ -16,15 +17,19 @@ import RosaNegro from "../../assets/img/Negro-Violeta.svg"
 const links = [
   {
     title: "Home",
+    link: "/",
   },
   {
     title: "About",
+    link: "/about",
   },
   {
     title: "Diet",
+    link: "/diet",
   },
   {
     title: "Contact",
+    link: "/contact",
   },
 ]
 
@@ -45,10 +50,16 @@ const Nav = () => {
     <header className="container-header">
       <nav className="container-nav">
         <ul className="container-nav-list">
-          {links.map((link, index) => {
+          {links.map(({ title, link }, index) => {
             return (
               <li key={index}>
-                <motion.a href="#">{link.title}</motion.a>
+                <Link
+                  onClick={() => console.log("click")}
+                  to={link}
+                  className="link"
+                >
+                  {title}
+                </Link>
               </li>
             )
           })}
@@ -62,6 +73,11 @@ const Nav = () => {
         </div>
         <div className="container-accesibilidad">
           <i class="fa-solid fa-universal-access"></i>
+        </div>
+        <div className="container-login-link">
+          <Link className="link" to={"/login"}>
+            <i class="ri-login-circle-line"></i>
+          </Link>
         </div>
         <div className={["container-colores", isOpen].join(" ")}>
           <div onClick={toggleThemeLight} className="color">

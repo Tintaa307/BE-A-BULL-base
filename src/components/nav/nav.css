@@ -22,23 +22,27 @@
   margin: 30px 20px;
 }
 
-.container-header .container-nav-list li a {
+.container-header .container-nav-list li .link {
   font-size: 1.1rem;
   color: var(--title-color);
   font-weight: bold;
-  border-bottom: 2px solid var(--color-main);
-  padding-bottom: 5px;
+}
+
+.container-header .container-nav-list li .link:hover {
+  color: var(--color-main);
 }
 
 .container-header .container-title {
-  position: relative;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  top: -55px;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .container-header .container-title i {
+  position: absolute;
+  top: -5px;
+  right: -20px;
   color: var(--color-main);
 }
 
@@ -49,6 +53,17 @@
 }
 
 .container-header .container-settings i {
+  font-size: 1.6rem;
+  color: var(--title-color);
+}
+
+.container-header .container-login-link {
+  position: absolute;
+  top: 30px;
+  right: 130px;
+}
+
+.container-header .container-login-link i {
   font-size: 1.6rem;
   color: var(--title-color);
 }
