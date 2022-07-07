@@ -45,6 +45,9 @@ const Home = () => {
             </a>
           </div>
         </div>
+        <div className="container-box">
+          <div className="box"></div>
+        </div>
       </div>
     </main>
   )

@@ -149,7 +149,6 @@ body {
   font-family: var(--body-font);
   font-size: var(--default-size);
   background-color: var(--body-color);
-  overflow-x: hidden;
 }
 
 h1,

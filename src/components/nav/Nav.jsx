@@ -58,7 +58,10 @@ const Nav = () => {
           <i class="ri-leaf-line"></i>
         </div>
         <div className="container-settings">
-          <i onClick={toggleColors} class="ri-settings-3-line"></i>
+          <i onClick={toggleColors} class="ri-palette-line"></i>
+        </div>
+        <div className="container-accesibilidad">
+          <i class="fa-solid fa-universal-access"></i>
         </div>
         <div className={["container-colores", isOpen].join(" ")}>
           <div onClick={toggleThemeLight} className="color">

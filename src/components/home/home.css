@@ -60,7 +60,7 @@
   box-shadow: 0 0 20px var(--color-main);
   transition: all 0.01s;
   transform: translateY(-50%, -50%);
-  z-index: 3;
+  z-index: 2;
 }
 
 .container-button a.neon {
