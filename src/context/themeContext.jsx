@@ -1,10 +1,32 @@
-import React, { useState, createContext } from "react"
+import React, { useState, createContext, useEffect } from "react"
 
 const ThemeContext = createContext()
 
 const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState("light")
   const [color, setColor] = useState("red")
+
+  useEffect(() => {
+    const localTheme = localStorage.getItem("theme")
+    const localColor = localStorage.getItem("color")
+
+    if (localTheme === "") {
+      setTheme("light")
+    } else {
+      setTheme(localTheme)
+    }
+
+    if (localColor === "") {
+      setColor("red")
+    } else {
+      setColor(localColor)
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem("color", color)
+    localStorage.setItem("theme", theme)
+  }, [])
 
   const changeColor = (e, color) => {
     color = e.target.className

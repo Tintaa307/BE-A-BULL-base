@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react"
+import React, { useState, useContext, useEffect } from "react"
 import "./nav.css"
 import ThemeContext from "../../context/themeContext"
 import { motion } from "framer-motion"
@@ -35,6 +35,7 @@ const Nav = () => {
   }
   const { color, toggleThemeDark, toggleThemeLight, changeColor } =
     useContext(ThemeContext)
+
   return (
     <header className="container-header">
       <nav className="container-nav">

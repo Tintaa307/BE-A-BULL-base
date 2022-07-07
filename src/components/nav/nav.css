@@ -93,7 +93,7 @@
   left: -2px;
   width: 30px;
   height: 30px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--body-color);
   border-radius: 50%;
 }
 

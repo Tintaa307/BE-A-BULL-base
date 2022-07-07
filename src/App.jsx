@@ -1,4 +1,4 @@
-import { useState, useContext } from "react"
+import { useState, useContext, useEffect } from "react"
 import logo from "./logo.svg"
 import "./App.css"
 import Nav from "./components/nav/Nav"
@@ -7,6 +7,7 @@ import ThemeContext from "./context/themeContext"
 
 function App() {
   const { theme, color } = useContext(ThemeContext)
+
   return (
     <>
       <div theme={theme} color={color} className="container-all">
