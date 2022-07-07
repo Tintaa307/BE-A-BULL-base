@@ -2,6 +2,16 @@ import React, { useState, useContext } from "react"
 import "./nav.css"
 import ThemeContext from "../../context/themeContext"
 import { motion } from "framer-motion"
+import RojoBlanco from "../../assets/img/Blanco-Rojo.svg"
+import AzulBlanco from "../../assets/img/Blanco-Azul.svg"
+import NaranjaBlanco from "../../assets/img/Blanco-Naranja.svg"
+import VerdeBlanco from "../../assets/img/Blanco-Verde.svg"
+import RosaBlanco from "../../assets/img/Blanco-Violeta.svg"
+import RojoNegro from "../../assets/img/Negro-Rojo.svg"
+import AzulNegro from "../../assets/img/Negro-Azul.svg"
+import NaranjaNegro from "../../assets/img/Negro-Naranja.svg"
+import VerdeNegro from "../../assets/img/Negro-Verde.svg"
+import RosaNegro from "../../assets/img/Negro-Violeta.svg"
 
 const links = [
   {
@@ -46,54 +56,62 @@ const Nav = () => {
         </div>
         <div className={["container-colores", isOpen].join(" ")}>
           <div onClick={toggleThemeLight} className="color">
-            <button onClick={changeColor} value={1} className="red">
-              <i class="ri-check-line"></i>
+            <button value={1} className="red">
+              <img onClick={changeColor} src={RojoBlanco} className="red" />
             </button>
           </div>
           <div onClick={toggleThemeLight} className="color">
-            <button onClick={changeColor} value={2} className="blue">
-              <i class="ri-check-line"></i>
+            <button value={2} className="blue">
+              <img onClick={changeColor} src={AzulBlanco} className="blue" />
             </button>
           </div>
           <div onClick={toggleThemeLight} className="color">
-            <button onClick={changeColor} value={3} className="orange">
-              <i class="ri-check-line"></i>
+            <button value={3} className="orange">
+              <img
+                onClick={changeColor}
+                src={NaranjaBlanco}
+                className="orange"
+              />
             </button>
           </div>
           <div onClick={toggleThemeLight} className="color">
-            <button onClick={changeColor} value={4} className="green">
-              <i class="ri-check-line"></i>
+            <button value={4} className="green">
+              <img onClick={changeColor} src={VerdeBlanco} className="green" />
             </button>
           </div>
           <div onClick={toggleThemeLight} className="color">
-            <button onClick={changeColor} value={5} className="rosa">
-              <i class="ri-check-line"></i>
+            <button value={5} className="rosa">
+              <img onClick={changeColor} src={RosaBlanco} className="rosa" />
             </button>
           </div>
 
           <div onClick={toggleThemeDark} className="color">
-            <button onClick={changeColor} value={6} className="red">
-              <i class="ri-check-line"></i>
+            <button value={6} className="red">
+              <img onClick={changeColor} src={RojoNegro} className="red" />
             </button>
           </div>
           <div onClick={toggleThemeDark} className="color">
-            <button onClick={changeColor} value={7} className="blue">
-              <i class="ri-check-line"></i>
+            <button value={7} className="blue">
+              <img onClick={changeColor} src={AzulNegro} className="blue" />
             </button>
           </div>
           <div onClick={toggleThemeDark} className="color">
-            <button onClick={changeColor} value={8} className="orange">
-              <i class="ri-check-line"></i>
+            <button value={8} className="orange">
+              <img
+                onClick={changeColor}
+                src={NaranjaNegro}
+                className="orange"
+              />
             </button>
           </div>
           <div onClick={toggleThemeDark} className="color">
-            <button onClick={changeColor} value={9} className="green">
-              <i class="ri-check-line"></i>
+            <button value={9} className="green">
+              <img onClick={changeColor} src={VerdeNegro} className="green" />
             </button>
           </div>
           <div onClick={toggleThemeDark} className="color">
-            <button onClick={changeColor} value={10} className="rosa">
-              <i class="ri-check-line"></i>
+            <button value={10} className="rosa">
+              <img onClick={changeColor} src={RosaNegro} className="rosa" />
             </button>
           </div>
         </div>
