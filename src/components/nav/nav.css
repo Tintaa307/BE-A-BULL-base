@@ -64,7 +64,7 @@
   width: 220px;
   height: max-content;
   transform: translateX(250px);
-  background-color: var(--text-color);
+  background-color: var(--nav-color-text);
   transition: var(--transition);
   display: flex;
   text-align: center;
