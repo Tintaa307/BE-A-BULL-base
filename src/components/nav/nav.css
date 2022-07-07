@@ -62,7 +62,7 @@
   position: absolute;
   right: -5px;
   width: 220px;
-  height: 90px;
+  height: max-content;
   transform: translateX(250px);
   background-color: var(--text-color);
   transition: var(--transition);
@@ -73,8 +73,8 @@
   border-radius: 5px;
 }
 
-.container-header .container-colores div {
-  margin: 6px 5px;
+.container-header .container-colores div.color {
+  margin: 10px 5px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -87,7 +87,7 @@
   border: 2px solid var(--nav-color-text);
 }
 
-.container-header .container-colores div button img {
+.container-header .container-colores .color button img {
   position: relative;
   top: -2px;
   left: -2px;
@@ -103,6 +103,29 @@
   color: #fff;
   font-size: 1.3rem;
   display: none;
+}
+
+.container-header .container-colores .container-btn-save {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.container-header .container-colores .container-btn-save button {
+  width: 90%;
+  height: 30px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid var(--body-color);
+  font-size: 1rem;
+  color: var(--body-color);
+  font-family: var(--body-font);
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.container-header .container-colores .container-btn-save button:hover {
+  background-color: var(--body-color);
+  color: var(--title-color);
 }
 
 .container-header .container-colores div button i.ri-check-line.active {

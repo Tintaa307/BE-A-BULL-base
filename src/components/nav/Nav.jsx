@@ -33,8 +33,13 @@ const Nav = () => {
   const toggleColors = () => {
     setIsOpen(isOpen === "" ? "open" : "")
   }
-  const { color, toggleThemeDark, toggleThemeLight, changeColor } =
+  const { theme, color, toggleThemeDark, toggleThemeLight, changeColor } =
     useContext(ThemeContext)
+
+  const saveData = () => {
+    localStorage.setItem("theme", theme)
+    localStorage.setItem("color", color)
+  }
 
   return (
     <header className="container-header">
@@ -114,6 +119,9 @@ const Nav = () => {
             <button value={10} className="rosa">
               <img onClick={changeColor} src={RosaNegro} className="rosa" />
             </button>
+          </div>
+          <div className="container-btn-save">
+            <button onClick={saveData}>Save Theme</button>
           </div>
         </div>
       </nav>
