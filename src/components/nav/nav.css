@@ -13,8 +13,8 @@
 
 .container-header .container-nav-list {
   display: flex;
-  text-align: left;
-  justify-content: left;
+  text-align: center;
+  justify-content: center;
 }
 
 .container-header .container-nav-list li {
@@ -35,8 +35,7 @@
 .container-header .container-title {
   position: absolute;
   top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 20px;
 }
 
 .container-header .container-title i {

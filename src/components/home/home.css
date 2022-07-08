@@ -54,6 +54,22 @@
   background-color: var(--color-main);
 }
 
+.container-home .container-content .container-info-content .container-video {
+  position: absolute;
+  top: 200px;
+  right: 200px;
+}
+
+.container-home
+  .container-content
+  .container-info-content
+  .container-video
+  .video {
+  width: 350px;
+  height: 300px;
+  border: 1px solid #fff;
+}
+
 .container-button a.neon {
   position: relative;
   display: inline-block;
