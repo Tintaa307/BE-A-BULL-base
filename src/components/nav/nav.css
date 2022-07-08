@@ -84,6 +84,7 @@
   color: var(--color-main);
   border: 1px solid var(--color-main);
   box-shadow: 0 0 12px var(--color-main);
+  z-index: 2;
 }
 
 .container-accesibilidad i {
@@ -207,6 +208,130 @@
 .container-header .container-colores.open {
   transform: translateX(0);
   transition: var(--transition);
+}
+
+.container-header .container-menu-accesibilidad {
+  width: 380px;
+  height: 90vh;
+  position: fixed;
+  top: 80px;
+  right: 0;
+  background-color: var(--title-color);
+  overflow-y: scroll;
+  z-index: 1;
+  scroll-behavior: smooth;
+  transform: translateX(400px);
+}
+
+.container-header .container-menu-accesibilidad.appear {
+  transform: translateX(0);
+}
+
+.container-header .container-menu-accesibilidad h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 30px 0;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: var(--body-color);
+}
+.container-header .container-menu-accesibilidad .container-items {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+
+.container-header .container-menu-accesibilidad .container-items .item {
+  margin: 20px 20px;
+  border-bottom: 1px solid var(--body-color);
+}
+
+.container-header .container-menu-accesibilidad .container-items .item h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  color: var(--body-color);
+}
+
+.container-header .container-menu-accesibilidad .container-items .item p {
+  font-size: 0.9rem;
+  padding: 20px 0;
+  color: var(--body-color);
+}
+
+/* Button css */
+
+.switch {
+  --button-width: 3em;
+  --button-height: 1.7em;
+  --toggle-diameter: 1.2em;
+  --button-toggle-offset: calc(
+    (var(--button-height) - var(--toggle-diameter)) / 2
+  );
+  --toggle-shadow-offset: 10px;
+  --toggle-wider: 3em;
+  --color-grey: #cccccc;
+  --color-green: #4296f4;
+}
+
+.slider {
+  display: inline-block;
+  width: var(--button-width);
+  height: var(--button-height);
+  background-color: #ff0000c7;
+  border-radius: calc(var(--button-height) / 2);
+  position: relative;
+  transition: 0.3s all ease-in-out;
+  margin-bottom: 1rem;
+}
+
+.slider::after {
+  content: "";
+  display: inline-block;
+  width: var(--toggle-diameter);
+  height: var(--toggle-diameter);
+  background-color: #fff;
+  border-radius: calc(var(--toggle-diameter) / 2);
+  position: absolute;
+  top: var(--button-toggle-offset);
+  transform: translateX(var(--button-toggle-offset));
+  box-shadow: var(--toggle-shadow-offset) 0
+    calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+  transition: 0.3s all ease-in-out;
+}
+
+.switch input[type="checkbox"]:checked + .slider {
+  background-color: var(--green);
+}
+
+.switch input[type="checkbox"]:checked + .slider::after {
+  transform: translateX(
+    calc(
+      var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)
+    )
+  );
+  box-shadow: calc(var(--toggle-shadow-offset) * -1) 0
+    calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+}
+
+.switch input[type="checkbox"] {
+  display: none;
+}
+
+.switch input[type="checkbox"]:active + .slider::after {
+  width: var(--toggle-wider);
+}
+
+.switch input[type="checkbox"]:checked:active + .slider::after {
+  transform: translateX(
+    calc(
+      var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)
+    )
+  );
 }
 
 @keyframes moves {

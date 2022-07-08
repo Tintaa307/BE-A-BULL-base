@@ -36,15 +36,25 @@ const links = [
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState("")
+  const [isAppear, setIsAppear] = useState("")
+
   const toggleColors = () => {
     setIsOpen(isOpen === "" ? "open" : "")
+    setIsAppear("")
   }
+
+  const toggleMenu = () => {
+    setIsAppear(isAppear === "" ? "appear" : "")
+    setIsOpen("")
+  }
+
   const { theme, color, toggleThemeDark, toggleThemeLight, changeColor } =
     useContext(ThemeContext)
 
   const saveData = () => {
     localStorage.setItem("theme", theme)
     localStorage.setItem("color", color)
+    setIsOpen("")
   }
 
   return (
@@ -73,7 +83,7 @@ const Nav = () => {
           <i onClick={toggleColors} class="ri-palette-line"></i>
         </div>
         <div className="container-accesibilidad">
-          <i class="fa-solid fa-universal-access"></i>
+          <i onClick={toggleMenu} class="fa-solid fa-universal-access"></i>
         </div>
         <LoginButton />
         <div className={["container-colores", isOpen].join(" ")}>
@@ -138,6 +148,35 @@ const Nav = () => {
           </div>
           <div className="container-btn-save">
             <button onClick={saveData}>Save Theme</button>
+          </div>
+        </div>
+        <div className={["container-menu-accesibilidad", isAppear].join(" ")}>
+          <h2>Menu Accesibilidad</h2>
+          <div className="container-items">
+            <div className="item">
+              <h5>Problemas de vista</h5>
+              <p>Aumenta el tamaño de la fuente de la página.</p>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div className="item">
+              <h5>Epilepsia</h5>
+              <p>Desactiva las animaciones y opaca los colores.</p>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div className="item">
+              <h5>Ayuda TDAH</h5>
+              <p>Ayuda a mejorar el foco de atencion.</p>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
           </div>
         </div>
       </nav>
