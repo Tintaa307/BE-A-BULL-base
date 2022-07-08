@@ -278,6 +278,7 @@
   font-size: var(--default-size);
   font-weight: bold;
   font-family: var(--body-color);
+  border: 2px solid var(--body-color);
 }
 
 .container-header
