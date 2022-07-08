@@ -176,7 +176,7 @@ a {
 [theme="dark"] {
   --body-color: #000;
   --text-color: #d1d1d1;
-  --text-color-light: #d1d1d1;
+  --text-color-light: rgba(255, 255, 255, 0.733);
   --title-color: #fff;
   --nav-color-text: #fff;
 }
@@ -184,7 +184,7 @@ a {
 [theme="light"] {
   --body-color: #fff;
   --text-color: #1e1e1e;
-  --text-color-light: #353535;
+  --text-color-light: #1e1e1e;
   --title-color: #000;
   --nav-color-text: #000;
 }

@@ -216,16 +216,18 @@
 }
 
 .container-header .container-menu-accesibilidad {
-  width: 380px;
+  width: 350px;
   height: 87.5vh;
   position: fixed;
-  top: 80px;
+  top: 100px;
   right: 0;
-  background-color: var(--title-color);
+  background-color: var(--text-color-light);
   overflow-y: scroll;
   z-index: 1;
   scroll-behavior: smooth;
   transform: translateX(400px);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .container-header .container-menu-accesibilidad.appear {

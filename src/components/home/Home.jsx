@@ -43,8 +43,8 @@ const Home = () => {
         <div className="container-info-content">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
-            perspiciatis vitae. Assumenda, autem atque. Nisi totam cupiditate
-            incidunt pariatur ipsum?
+            perspiciatis vitae. <br /> Assumenda, autem atque. Nisi totam
+            cupiditate incidunt pariatur ipsum?
           </p>
           <div className="container-button">
             <a className="neon" href="#">

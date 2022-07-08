@@ -18,19 +18,19 @@ import LoginButton from "../login/LoginButton"
 
 const links = [
   {
-    title: "Home",
+    title: "Inicio",
     link: "/",
   },
   {
-    title: "About",
-    link: "/about",
+    title: "Rutinas",
+    link: "/Rutines",
   },
   {
-    title: "Diet",
-    link: "/diet",
+    title: "Planes alimenticios",
+    link: "/diets",
   },
   {
-    title: "Contact",
+    title: "Contacto",
     link: "/contact",
   },
 ]
