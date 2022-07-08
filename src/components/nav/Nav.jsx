@@ -177,6 +177,14 @@ const Nav = () => {
                 <span class="slider"></span>
               </label>
             </div>
+            <div className="item">
+              <h5>Cambio Idioma</h5>
+              <p>Cambia el idioma de la pagina a ingles.</p>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </div>
           </div>
         </div>
       </nav>
