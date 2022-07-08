@@ -113,11 +113,15 @@
   /* =========== FONT TYPE =========== */
   --body-font: "Exo", sans-serif;
   --details-font: "La Belle Aurore", cursive;
-  --default-size: 1rem;
+  --default-size: 1.1rem;
+  --bigger-size: 1.5rem;
+  --big-size: 1.2rem;
   --sm-size: 0.883rem;
   --sxm-size: 0.75rem;
   --img-size: 50%;
   --icon-size: 1.3rem;
+  --title-size: 1.7rem;
+  --special: 3rem;
 
   /* =========== TRANSITIONS =========== */
   --transition: all 0.4s ease-in-out;
@@ -238,10 +242,14 @@ a {
   --transition: none;
 }
 
-[size="big-size"] {
-  --default-size: 1.7rem;
-  --sm-size: 0.9rem;
-  --sxm-size: 0.8rem;
+[size="big"] {
+  --default-size: 1.4rem;
+  --bigger-size: 1.8rem;
+  --big-size: 1.5rem;
+  --sm-size: 1.1rem;
+  --sxm-size: 0.95rem;
   --img-size: 70%;
   --icon-size: 1.7rem;
+  --title-size: 2.1rem;
+  --special: 3.4rem;
 }

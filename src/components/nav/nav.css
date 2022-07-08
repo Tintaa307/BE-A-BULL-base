@@ -23,7 +23,7 @@
 }
 
 .container-header .container-nav-list li .link {
-  font-size: 1.1rem;
+  font-size: var(--default-size);
   color: var(--title-color);
   font-weight: bold;
 }
@@ -44,6 +44,11 @@
   top: -5px;
   right: -20px;
   color: var(--color-main);
+  font-size: var(--default-size);
+}
+
+.container-header .container-title h1 {
+  font-size: var(--title-size);
 }
 
 .container-header .container-settings {
@@ -53,7 +58,7 @@
 }
 
 .container-header .container-settings i {
-  font-size: 1.6rem;
+  font-size: var(--bigger-size);
   color: var(--title-color);
 }
 
@@ -65,7 +70,7 @@
 
 .container-login-link i {
   position: absolute;
-  font-size: 1.6rem;
+  font-size: var(--bigger-size);
   color: var(--title-color);
 }
 
@@ -88,7 +93,7 @@
 }
 
 .container-accesibilidad i {
-  font-size: 3rem;
+  font-size: var(--special);
 }
 
 .container-header .container-colores {
@@ -134,7 +139,7 @@
   position: relative;
   top: 2px;
   color: #fff;
-  font-size: 1.3rem;
+  font-size: var(--big-size);
   display: none;
 }
 
@@ -149,7 +154,7 @@
   border-radius: 5px;
   background-color: transparent;
   border: 2px solid var(--body-color);
-  font-size: 1rem;
+  font-size: var(--default-size);
   color: var(--body-color);
   font-family: var(--body-font);
   letter-spacing: 1px;
@@ -212,7 +217,7 @@
 
 .container-header .container-menu-accesibilidad {
   width: 380px;
-  height: 90vh;
+  height: 87.5vh;
   position: fixed;
   top: 80px;
   right: 0;
@@ -228,7 +233,7 @@
 }
 
 .container-header .container-menu-accesibilidad h2 {
-  font-size: 1.5rem;
+  font-size: var(--bigger-sizeb);
   font-weight: bold;
   margin: 30px 0;
   margin-bottom: 3rem;
@@ -250,7 +255,7 @@
 }
 
 .container-header .container-menu-accesibilidad .container-items .item h5 {
-  font-size: 1.2rem;
+  font-size: var(--default-size);
   font-weight: bold;
   margin: 0;
   margin-bottom: 0.5rem;
@@ -258,9 +263,30 @@
 }
 
 .container-header .container-menu-accesibilidad .container-items .item p {
-  font-size: 0.9rem;
+  font-size: var(--sm-size);
   padding: 20px 0;
   color: var(--body-color);
+}
+
+.container-header .container-menu-accesibilidad .container-items .item button {
+  width: 180px;
+  height: 40px;
+  margin: 30px 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: var(--body-color);
+  font-size: var(--default-size);
+  font-weight: bold;
+  font-family: var(--body-color);
+}
+
+.container-header
+  .container-menu-accesibilidad
+  .container-items
+  .item
+  button:hover {
+  background-color: var(--body-color);
+  color: var(--title-color);
 }
 
 /* Button css */

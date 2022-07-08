@@ -5,7 +5,7 @@
 }
 
 .container-home h1 {
-  font-size: 3rem;
+  font-size: var(--special);
   font-weight: 600;
   margin-bottom: 2.2rem;
   padding-left: 40px;
@@ -33,7 +33,7 @@
 }
 
 .container-home .container-content .container-info-content p {
-  font-size: 1rem;
+  font-size: var(--sm-size);
   font-weight: 600;
   color: var(--text-color);
   margin-bottom: 2.2rem;

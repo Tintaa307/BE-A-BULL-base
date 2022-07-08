@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from "react"
 import "./nav.css"
 import ThemeContext from "../../context/themeContext"
+import SizeContext from "../../context/sizeContext"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import RojoBlanco from "../../assets/img/Blanco-Rojo.svg"
@@ -51,10 +52,17 @@ const Nav = () => {
   const { theme, color, toggleThemeDark, toggleThemeLight, changeColor } =
     useContext(ThemeContext)
 
+  const { size, toggleSize } = useContext(SizeContext)
+
   const saveData = () => {
     localStorage.setItem("theme", theme)
     localStorage.setItem("color", color)
     setIsOpen("")
+  }
+
+  const saveSize = () => {
+    localStorage.setItem("size", size)
+    setIsAppear("")
   }
 
   return (
@@ -157,7 +165,7 @@ const Nav = () => {
               <h5>Problemas de vista</h5>
               <p>Aumenta el tamaño de la fuente de la página.</p>
               <label class="switch">
-                <input type="checkbox" />
+                <input onClick={toggleSize} type="checkbox" />
                 <span class="slider"></span>
               </label>
             </div>
@@ -184,6 +192,9 @@ const Nav = () => {
                 <input type="checkbox" />
                 <span class="slider"></span>
               </label>
+            </div>
+            <div className="item">
+              <button onClick={saveSize}>Save Config</button>
             </div>
           </div>
         </div>
