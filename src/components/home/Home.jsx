@@ -2,8 +2,19 @@ import React, { useEffect, useState, useRef } from "react"
 import "./home.css"
 import TypeAnimation from "react-type-animation"
 import { motion } from "framer-motion"
+import { Typewriter, useTypewriter, Cursor } from "react-simple-typewriter"
 
 const Home = () => {
+  const { text, count } = useTypewriter({
+    words: ["Bull", "Toro", "Touro", "Taureau", "Stier"],
+    count: 0,
+    delay: 100,
+    loop: false,
+    onComplete: () => {
+      console.log("complete")
+    },
+  })
+
   return (
     <motion.main
       initial={{ x: -800 }}
@@ -19,24 +30,7 @@ const Home = () => {
           transition={{ duration: 0.2, delay: 0.8 }}
           class="container-typing"
         >
-          <TypeAnimation
-            cursor={false}
-            sequence={[
-              "Bull",
-              2400,
-              "Toro",
-              2400,
-              "Touro",
-              2400,
-              "Taureau",
-              2400,
-              "Stier",
-              2400,
-            ]}
-            wrapper="h1"
-            repeat={Infinity}
-            className="type"
-          />
+          {text}
         </motion.span>
       </h1>
       <div className="container-content">
