@@ -17,7 +17,7 @@ const SizeProvider = ({ children }) => {
   }, [])
 
   const toggleSize = () => {
-    setSize("big")
+    setSize(size === "" ? "big" : "")
   }
 
   const data = { size, toggleSize }
