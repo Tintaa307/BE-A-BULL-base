@@ -12,10 +12,13 @@ import AnimationContext from "./context/animationContext"
 function App() {
   const { theme, color } = useContext(ThemeContext)
   const { size } = useContext(SizeContext)
-  const { isAnimated } = useContext(AnimationContext)
+  const { opaque } = useContext(AnimationContext)
+
+  console.log(opaque)
+
   return (
     <>
-      <div theme={theme} color={color} font-size={size} opaque={isAnimated}>
+      <div theme={theme} color={color} font-size={size} opaque={opaque}>
         <BrowserRouter>
           <Nav />
           <AnimatedRoutes />

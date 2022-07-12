@@ -55,7 +55,7 @@ const Nav = () => {
 
   const { size, toggleSize } = useContext(SizeContext)
 
-  const { isAnimated, toggleAnimation } = useContext(AnimationContext)
+  const { opaque, toggleAnimated } = useContext(AnimationContext)
 
   const saveData = () => {
     localStorage.setItem("theme", theme)
@@ -65,7 +65,7 @@ const Nav = () => {
 
   const saveSize = () => {
     localStorage.setItem("size", size)
-    localStorage.setItem("opaque", isAnimated)
+    localStorage.setItem("opaque", opaque)
     setIsAppear("")
   }
 
@@ -94,7 +94,7 @@ const Nav = () => {
         <div className="container-settings">
           <i onClick={toggleColors} class="ri-palette-line"></i>
         </div>
-        <div className="container-accesibilidad">
+        <div className={["container-accesibilidad", isAppear].join(" ")}>
           <i onClick={toggleMenu} class="fa-solid fa-universal-access"></i>
         </div>
         <LoginButton />
@@ -159,7 +159,7 @@ const Nav = () => {
             </button>
           </div>
           <div className="container-btn-save">
-            <button onClick={saveData}>Save Theme</button>
+            <button onClick={saveData}>Guardar Tema</button>
           </div>
         </div>
         <div className={["container-menu-accesibilidad", isAppear].join(" ")}>
@@ -177,7 +177,7 @@ const Nav = () => {
               <h5>Epilepsia</h5>
               <p>Desactiva las animaciones y opaca los colores.</p>
               <label class="switch">
-                <input onClick={toggleAnimation} type="checkbox" />
+                <input onClick={toggleAnimated} type="checkbox" />
                 <span class="slider"></span>
               </label>
             </div>
@@ -198,7 +198,7 @@ const Nav = () => {
               </label>
             </div>
             <div className="item">
-              <button onClick={saveSize}>Save Config</button>
+              <button onClick={saveSize}>Guardar </button>
             </div>
           </div>
         </div>

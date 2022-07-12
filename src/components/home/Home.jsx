@@ -1,10 +1,12 @@
-import React, { useEffect, useState, useRef } from "react"
+import React, { useContext, useEffect, useState, useRef } from "react"
 import "./home.css"
 import TypeAnimation from "react-type-animation"
 import { motion } from "framer-motion"
 import { Typewriter, useTypewriter, Cursor } from "react-simple-typewriter"
+import AnimationContext from "../../context/animationContext"
 
 const Home = () => {
+  const { opaque } = useContext(AnimationContext)
   const { text, count } = useTypewriter({
     words: ["Bull", "Toro", "Touro", "Taureau", "Stier"],
     count: 0,
@@ -41,12 +43,12 @@ const Home = () => {
             cupiditate incidunt pariatur ipsum?
           </p>
           <div className="container-button">
-            <a className="neon" href="#">
+            <a className={["neon", opaque].join(" ")} href="#">
               <span className="span"></span>
               <span className="span"></span>
               <span className="span"></span>
               <span className="span"></span>
-              Contact Us
+              Contactanos
             </a>
           </div>
         </div>

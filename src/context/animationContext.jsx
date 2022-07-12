@@ -3,16 +3,16 @@ import React, { createContext, useState, useEffect } from "react"
 const AnimationContext = createContext()
 
 const AnimationProvider = ({ children }) => {
-  const [isAnimated, setIsAnimated] = useState("")
+  const [opaque, setOpaque] = useState("")
 
   const toggleAnimated = () => {
-    setIsAnimated(isAnimated === "" ? "opaque" : "")
+    setOpaque(opaque === "" ? "opaque" : "")
   }
 
   const loadData = () => {
-    const isAnimated = localStorage.getItem("isAnimated")
-    if (isAnimated) {
-      setIsAnimated(isAnimated)
+    const opaque = localStorage.getItem("opaque")
+    if (opaque) {
+      setOpaque(opaque)
     }
   }
 
@@ -20,7 +20,7 @@ const AnimationProvider = ({ children }) => {
     loadData()
   }, [])
 
-  const data = { isAnimated, toggleAnimated }
+  const data = { opaque, toggleAnimated }
 
   return (
     <AnimationContext.Provider value={data}>

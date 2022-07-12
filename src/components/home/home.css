@@ -93,6 +93,13 @@
   display: block;
 }
 
+.container-button a.neon.opaque {
+  background-color: var(--color-main);
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
+  opacity: 0.9;
+}
+
 .container-button a.neon span.span:nth-child(1) {
   top: 0;
   left: -100%;
@@ -146,4 +153,9 @@
   bottom: 100%;
   transition: 1s;
   transition-delay: 0.75s;
+}
+
+.container-button a.neon.opaque:hover span {
+  display: none;
+  transition: var(--transition);
 }
