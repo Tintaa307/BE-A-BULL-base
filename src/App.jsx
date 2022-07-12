@@ -13,7 +13,7 @@ function App() {
   const { size } = useContext(SizeContext)
   return (
     <>
-      <div theme={theme} color={color} size={size}>
+      <div theme={theme} color={color} font-size={size}>
         <BrowserRouter>
           <Nav />
           <AnimatedRoutes />

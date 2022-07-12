@@ -242,7 +242,7 @@ a {
   --transition: none;
 }
 
-[size="big"] {
+[font-size="big"] {
   --default-size: 1.4rem;
   --bigger-size: 1.8rem;
   --big-size: 1.5rem;
