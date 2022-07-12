@@ -313,6 +313,11 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 2;
+  display: none;
+}
+
+.container-header .container-informacion.info {
+  display: block;
 }
 
 .container-header .container-informacion .info {
@@ -346,16 +351,18 @@
 }
 
 .container-header .container-informacion .info .container-top-info i {
-  color: var(--body-color);
+  color: #ff0000;
   font-size: var(--title-size);
   position: relative;
   top: 3px;
   right: -60px;
+  cursor: pointer;
 }
 
 .container-header .container-informacion .info .container-top-info p {
   font-family: var(--info-font);
   padding-bottom: 20px;
+  color: var(--body-color);
 }
 
 .container-header .container-informacion .info .container-info-help {
@@ -375,6 +382,12 @@
   font-size: var(--bigger-size);
   font-family: var(--info-font);
   color: var(--body-color);
+}
+
+.container-header .container-informacion .info .container-info-help div p {
+  color: var(--body-color);
+  font-size: var(--default-size);
+  padding: 0 20px;
 }
 
 /* Button css */

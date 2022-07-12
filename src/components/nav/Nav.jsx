@@ -55,6 +55,10 @@ const Nav = () => {
     setInfo(info === "" ? "info" : "")
   }
 
+  const closeInfoMenu = () => {
+    setInfo("")
+  }
+
   const { theme, color, toggleThemeDark, toggleThemeLight, changeColor } =
     useContext(ThemeContext)
 
@@ -169,7 +173,8 @@ const Nav = () => {
         </div>
         <div className={["container-menu-accesibilidad", isAppear].join(" ")}>
           <h2>
-            Menu Accesibilidad <i class="ri-information-line"></i>
+            Menu Accesibilidad{" "}
+            <i onClick={toggleInfoMenu} class="ri-information-line"></i>
           </h2>
           <div className="container-items">
             <div className="item">
@@ -209,13 +214,18 @@ const Nav = () => {
             </div>
           </div>
         </div>
-        <div className="container-informacion">
-          <div className="info">
+        <div className={["container-informacion", info].join(" ")}>
+          <motion.div
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1, transformOrigin: "right" }}
+            transition={{ duration: 0.1 }}
+            className="info"
+          >
             <div className="container-top-info">
               <h2 className="title-box">
                 ¿Para qué sirve el menú de accesibilidad?
               </h2>
-              <i class="ri-close-line"></i>
+              <i onClick={closeInfoMenu} class="ri-close-circle-fill"></i>
               <p>
                 El menú de accesibilidad es una opción que le sirve a las
                 personas con discapacidad de usar la página de una manera mas
@@ -259,7 +269,7 @@ const Nav = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </nav>
     </header>
