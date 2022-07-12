@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react"
 import "./nav.css"
 import ThemeContext from "../../context/themeContext"
 import SizeContext from "../../context/sizeContext"
+import AnimationContext from "../../context/animationContext"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import RojoBlanco from "../../assets/img/Blanco-Rojo.svg"
@@ -23,7 +24,7 @@ const links = [
   },
   {
     title: "Rutinas",
-    link: "/Rutines",
+    link: "/rutines",
   },
   {
     title: "Planes alimenticios",
@@ -54,6 +55,8 @@ const Nav = () => {
 
   const { size, toggleSize } = useContext(SizeContext)
 
+  const { isAnimated, toggleAnimation } = useContext(AnimationContext)
+
   const saveData = () => {
     localStorage.setItem("theme", theme)
     localStorage.setItem("color", color)
@@ -62,6 +65,7 @@ const Nav = () => {
 
   const saveSize = () => {
     localStorage.setItem("size", size)
+    localStorage.setItem("opaque", isAnimated)
     setIsAppear("")
   }
 
@@ -173,7 +177,7 @@ const Nav = () => {
               <h5>Epilepsia</h5>
               <p>Desactiva las animaciones y opaca los colores.</p>
               <label class="switch">
-                <input type="checkbox" />
+                <input onClick={toggleAnimation} type="checkbox" />
                 <span class="slider"></span>
               </label>
             </div>

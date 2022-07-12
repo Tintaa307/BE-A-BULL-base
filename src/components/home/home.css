@@ -13,9 +13,7 @@
 }
 
 .container-home h1 span.container-typing {
-  position: absolute;
-  top: 144px;
-  left: 295px;
+  margin-left: 20px;
   color: var(--color-main);
 }
 
