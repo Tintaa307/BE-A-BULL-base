@@ -39,6 +39,7 @@ const links = [
 const Nav = () => {
   const [isOpen, setIsOpen] = useState("")
   const [isAppear, setIsAppear] = useState("")
+  const [info, setInfo] = useState("")
 
   const toggleColors = () => {
     setIsOpen(isOpen === "" ? "open" : "")
@@ -48,6 +49,10 @@ const Nav = () => {
   const toggleMenu = () => {
     setIsAppear(isAppear === "" ? "appear" : "")
     setIsOpen("")
+  }
+
+  const toggleInfoMenu = () => {
+    setInfo(info === "" ? "info" : "")
   }
 
   const { theme, color, toggleThemeDark, toggleThemeLight, changeColor } =
@@ -206,7 +211,7 @@ const Nav = () => {
         </div>
         <div className="container-informacion">
           <div className="info">
-            <div className="container-fixed">
+            <div className="container-top-info">
               <h2 className="title-box">
                 ¿Para qué sirve el menú de accesibilidad?
               </h2>
@@ -218,36 +223,41 @@ const Nav = () => {
               </p>
               <h2 className="subtitle-box">OPCIONES</h2>
             </div>
-            <div className="container-aumento-letra">
-              <h1 className="box-tamaño">Aumento de tamaño: </h1>
-              <p>
-                La función de este botón es aumentar el tamaño de las palabras,
-                sirve para todas aquellas personas que tengan problemas de
-                visión, o que no sean capaces de leer una letra tan pequeña.
-              </p>
-            </div>
-            <div className="container-epilepsia">
-              <h2 className="box-epilepsia">Prevención contra la epilepsia:</h2>
-              <p>
-                Este botón sirve como prevención para aquellas personas que
-                poseen epilepsia, desactiva completamente las animaciones y
-                disminuye tambien la luminosidad de los colores.
-              </p>
-            </div>
-            <div className="container-TDAH">
-              <h1 className="box-tdah">Ayuda a TDAH:</h1>
-              <p>
-                Este botón se ocupa de activar una función que enfoca
-                precisamente donde esta ubicado el ratón y desenfocaar todo el
-                fondo dandole opacidad.
-              </p>
-            </div>
-            <div className="container-idioma">
-              <h1 className="box-idioma">Cambio de idioma:</h1>
-              <p>
-                La función de botón es cambiar el idioma de la página, ya sea a
-                inglés, italiano, francés o español.
-              </p>
+            <div className="container-info-help">
+              <div className="container-info-acc">
+                <h3 className="box-tamaño">Aumento de tamaño: </h3>
+                <p>
+                  La función de este botón es aumentar el tamaño de las
+                  palabras, sirve para todas aquellas personas que tengan
+                  problemas de visión, o que no sean capaces de leer una letra
+                  tan pequeña.
+                </p>
+              </div>
+              <div className="container-info-acc">
+                <h3 className="box-epilepsia">
+                  Prevención contra la epilepsia:
+                </h3>
+                <p>
+                  Este botón sirve como prevención para aquellas personas que
+                  poseen epilepsia, desactiva completamente las animaciones y
+                  disminuye tambien la luminosidad de los colores.
+                </p>
+              </div>
+              <div className="container-info-acc">
+                <h3 className="box-tdah">Ayuda a TDAH:</h3>
+                <p>
+                  Este botón se ocupa de activar una función que enfoca
+                  precisamente donde esta ubicado el ratón y desenfocaar todo el
+                  fondo dandole opacidad.
+                </p>
+              </div>
+              <div className="container-info-acc">
+                <h3 className="box-idioma">Cambio de idioma:</h3>
+                <p>
+                  La función de botón es cambiar el idioma de la página, ya sea
+                  a inglés, italiano, francés o español.
+                </p>
+              </div>
             </div>
           </div>
         </div>

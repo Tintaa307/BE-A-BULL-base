@@ -323,30 +323,58 @@
   margin: auto;
   margin-top: 70px;
   background-color: var(--title-color);
+  overflow-y: scroll;
 }
 
-.container-header .container-informacion {
-  color: var(--body-color);
-}
-
-.container-header .container-informacion .info .title-box {
-  color: var(--body-color);
+.container-header .container-informacion .info .container-top-info {
+  width: 100%;
+  height: max-content;
+  margin: 20px 0;
+  z-index: 3;
+  display: flex;
   text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--body-color);
 }
 
-.container-header .container-informacion .info .subtitle-box {
+.container-header .container-informacion .info .container-top-info h2 {
+  padding-bottom: 1rem;
   color: var(--body-color);
-  text-align: center;
-  margin-top: 20px;
+  font-family: var(--info-font);
 }
 
-.container-header .container-informacion .info i {
-  cursor: pointer;
+.container-header .container-informacion .info .container-top-info i {
   color: var(--body-color);
+  font-size: var(--title-size);
   position: relative;
-  left: 650px;
-  bottom: 29px;
+  top: 3px;
+  right: -60px;
+}
+
+.container-header .container-informacion .info .container-top-info p {
+  font-family: var(--info-font);
+  padding-bottom: 20px;
+}
+
+.container-header .container-informacion .info .container-info-help {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container-header .container-informacion .info .container-info-help div {
+  margin: 20px 0;
+}
+
+.container-header .container-informacion .info .container-info-help div h3 {
+  padding-bottom: 1rem;
   font-size: var(--bigger-size);
+  font-family: var(--info-font);
+  color: var(--body-color);
 }
 
 /* Button css */
