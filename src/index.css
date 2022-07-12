@@ -220,11 +220,6 @@ a {
 }
 
 [opaque="opaque"] {
-  --body-color: #000;
-  --text-color: #d1d1d1;
-  --text-color-light: #353535;
-  --nav-color-text: #fff;
-  --title-color: #fff;
   --color-main: var(--color-main-opaque);
   --color-main-light: #0048cf7e;
   --color-main-lighten: #0060de83;

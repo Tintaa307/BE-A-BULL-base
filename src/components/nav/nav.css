@@ -288,6 +288,14 @@
   border: 2px solid var(--body-color);
 }
 
+.container-header .container-menu-accesibilidad i {
+  font-size: var(--big-size);
+  position: relative;
+  left: 5px;
+  top: 2px;
+  cursor: pointer;
+}
+
 .container-header
   .container-menu-accesibilidad
   .container-items
@@ -295,6 +303,50 @@
   button:hover {
   background-color: var(--body-color);
   color: var(--title-color);
+}
+
+.container-header .container-informacion {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.container-header .container-informacion .info {
+  width: 700px;
+  height: 500px;
+  border-radius: 20px;
+  display: block;
+  margin: auto;
+  margin-top: 70px;
+  background-color: var(--title-color);
+}
+
+.container-header .container-informacion {
+  color: var(--body-color);
+}
+
+.container-header .container-informacion .info .title-box {
+  color: var(--body-color);
+  text-align: center;
+}
+
+.container-header .container-informacion .info .subtitle-box {
+  color: var(--body-color);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.container-header .container-informacion .info i {
+  cursor: pointer;
+  color: var(--body-color);
+  position: relative;
+  left: 650px;
+  bottom: 29px;
+  font-size: var(--bigger-size);
 }
 
 /* Button css */

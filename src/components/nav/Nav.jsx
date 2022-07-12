@@ -163,7 +163,9 @@ const Nav = () => {
           </div>
         </div>
         <div className={["container-menu-accesibilidad", isAppear].join(" ")}>
-          <h2>Menu Accesibilidad</h2>
+          <h2>
+            Menu Accesibilidad <i class="ri-information-line"></i>
+          </h2>
           <div className="container-items">
             <div className="item">
               <h5>Problemas de vista</h5>
@@ -199,6 +201,53 @@ const Nav = () => {
             </div>
             <div className="item">
               <button onClick={saveSize}>Guardar </button>
+            </div>
+          </div>
+        </div>
+        <div className="container-informacion">
+          <div className="info">
+            <div className="container-fixed">
+              <h2 className="title-box">
+                ¿Para qué sirve el menú de accesibilidad?
+              </h2>
+              <i class="ri-close-line"></i>
+              <p>
+                El menú de accesibilidad es una opción que le sirve a las
+                personas con discapacidad de usar la página de una manera mas
+                llevadera.
+              </p>
+              <h2 className="subtitle-box">OPCIONES</h2>
+            </div>
+            <div className="container-aumento-letra">
+              <h1 className="box-tamaño">Aumento de tamaño: </h1>
+              <p>
+                La función de este botón es aumentar el tamaño de las palabras,
+                sirve para todas aquellas personas que tengan problemas de
+                visión, o que no sean capaces de leer una letra tan pequeña.
+              </p>
+            </div>
+            <div className="container-epilepsia">
+              <h2 className="box-epilepsia">Prevención contra la epilepsia:</h2>
+              <p>
+                Este botón sirve como prevención para aquellas personas que
+                poseen epilepsia, desactiva completamente las animaciones y
+                disminuye tambien la luminosidad de los colores.
+              </p>
+            </div>
+            <div className="container-TDAH">
+              <h1 className="box-tdah">Ayuda a TDAH:</h1>
+              <p>
+                Este botón se ocupa de activar una función que enfoca
+                precisamente donde esta ubicado el ratón y desenfocaar todo el
+                fondo dandole opacidad.
+              </p>
+            </div>
+            <div className="container-idioma">
+              <h1 className="box-idioma">Cambio de idioma:</h1>
+              <p>
+                La función de botón es cambiar el idioma de la página, ya sea a
+                inglés, italiano, francés o español.
+              </p>
             </div>
           </div>
         </div>

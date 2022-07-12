@@ -17,6 +17,10 @@
   color: var(--color-main);
 }
 
+.container-home h1 span.container-typing.opaque {
+  display: none;
+}
+
 .container-home .container-content {
   width: 100%;
 }
@@ -34,6 +38,10 @@
   margin-bottom: 2.2rem;
   line-height: 30px;
   letter-spacing: 1px;
+}
+
+.container-home .container-content .container-info-content span {
+  color: var(--color-main);
 }
 
 .container-home .container-content .container-box {
