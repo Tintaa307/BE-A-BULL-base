@@ -97,7 +97,7 @@ const Nav = () => {
           })}
         </ul>
         <div className="container-title">
-          <h1>BE A FUCKING BULL</h1>
+          <h1>BE A BULL</h1>
           <i class="ri-leaf-line"></i>
         </div>
         <div className="container-settings">
